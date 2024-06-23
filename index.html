@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+    width: 100vw;
+    overflow: hidden;
+}
+button{
+    position: absolute;
+    left: 43.5%;
+    top: 57%;
+    border: none;
+    background-color: black;
+    border-radius: 50%;
+    height: 40px;
+    width: 50px;
+    color: white;
+    font-size: 20px;
+   z-index: 2;
+    
+}
+#heart{
+    height: 20%;
+    width: 20%;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    display: none;
+    
+   
+}
+#heart.animate {
+    display: block;
+    animation: scale 1.2s infinite backwards;
+
+}
+@keyframes scale{
+    
+    0%{
+        height: 20%;
+    width: 20%;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    }
+    100%{
+        height: 50%;
+        width: 50%;
+        top:35%;
+    left: 25.5%;
+    }
+    
+}
+    </style>
+</head>
+<body id="bg">
+    <button id="button" >click</button>
+    <img src="he.svg" id="heart">
+    <script>document.getElementById('button').addEventListener('click', function() {
+        document.getElementById('heart').classList.add('animate');
+    });</script>
+</body>
+</html>
